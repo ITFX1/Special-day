@@ -1,64 +1,20 @@
-
-body {
-    background-color: #0d0d0d;
-    color: white;
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-
-.container {
-    max-width: 400px;
-}
-
-h1 {
-    color: #00ffcc;
-}
-
-input {
-    padding: 10px;
-    margin: 10px;
-    background: black;
-    border: 1px solid #00ffcc;
-    color: white;
-    width: 70%;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid #00ffcc;
-    color: #00ffcc;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #00ffcc;
-    color: black;
-}
-
-#error {
-    color: red;
-    margin-top: 10px;
-}
-/* ================= GENERAL =================*/
-
-body {
+/* ================= RESET ================= */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
     font-family: Arial, sans-serif;
     background: black;
     color: white;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
-    font-size: 1.1rem;
-    line-height: 1.6;
 }
+
 /* ================= SECTIONS ================= */
 .section {
     min-height: 100vh;
@@ -66,13 +22,70 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ================= LOGIN PAGE ================= */
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
     padding: 20px;
+    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* dark overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.container * {
+    position: relative;
+    z-index: 1;
+}
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 8px;
+    border: 1px solid #00ffcc;
+    background: black;
+    color: white;
+    font-size: 16px;
+}
+
+/* ================= BUTTON (PREMIUM STYLE) ================= */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #00ffcc, #0099ff);
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* ================= HOME ================= */
 .hero {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -80,7 +93,8 @@ body {
     padding: 30px;
     position: relative;
 }
-/* DARK OVERLAY */
+
+/* overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -91,61 +105,38 @@ body {
     left: 0;
 }
 
-/* TEXT ABOVE IMAGE */
 .hero * {
     position: relative;
     z-index: 1;
 }
 
 .hero h1 {
-    font-size: 45px;
+    font-size: 40px;
     color: #00ffcc;
 }
 
 .hero p {
-    max-width: 300px;
+    font-size: 18px;
     margin-top: 10px;
-}
-
-/* ================= BUTTONS ================= */
-button {
-    margin-top: 10px;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #00ffcc;
-    background: transparent;
-    color: #00ffcc;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #00ffcc;
-    color: black;
+    max-width: 400px;
 }
 
 /* ================= STORY LIST ================= */
 .chapter-list {
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     margin-top: 20px;
 }
 
 .chapter-list button {
-    display: block;
     width: 100%;
-    margin: 8px 0;
+    margin: 10px 0;
     text-align: left;
-    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    position: relative;
-}
-
-.chapter-list button:hover {
-    background: #00ffcc;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 16px;
 }
 
 /* ================= CHAPTER PAGE ================= */
@@ -160,7 +151,7 @@ button:hover {
     align-items: center;
 }
 
-/* overlay dark effect */
+/* overlay */
 #chapterPage::before {
     content: "";
     position: absolute;
@@ -173,132 +164,67 @@ button:hover {
 .chapter-box {
     position: relative;
     z-index: 1;
-    max-width: 500px;
+    width: 90%;
+    max-width: 600px;
     padding: 20px;
     text-align: center;
 }
 
 /* title */
 #chapterTitle {
+    font-size: 26px;
     color: #00ffcc;
-    h1, h2 {
-    font-size: 1.6rem;
-    }
+    margin-bottom: 10px;
 }
 
 /* text */
 #chapterText {
-    font-size: 1.2rem;
+    font-size: 18px;
     line-height: 1.8;
     white-space: pre-line;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 /* ================= BIRTHDAY ================= */
 .card {
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     background: #111;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
 }
 
 .card h1 {
     color: #00ffcc;
-}
-.chapter-page {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 28px;
 }
 
-/* DARK OVERLAY kugirango text isomeke neza */
-.chapter-page::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
+.card p {
+    font-size: 18px;
 }
 
-/* BOX IRIMO MESSAGE */
-
-/* TITLE */
-#chapterTitle {
-    font-size: 40px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* TEXT */
-#chapterText {
-    font-size: 30px;
-    line-height: 1.9;
-    white-space: pre-line;
-}
-
-#chapterText {
-    flex: 1;
-    overflow-y: auto;
-    line-height: 1.9;
-    font-size: 30px;
-    padding-right: 5px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.hero {
-    width: 100%;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px;
-    background-color: rgba(0,0,0,0.6);
-    background-blend-mode: darken;
-}
+/* ================= MOBILE OPTIMIZATION ================= */
 @media (max-width: 768px) {
-    html {
-        font-size: 20px;
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #chapterTitle {
+        font-size: 22px;
     }
 
     #chapterText {
-        font-size: 1.3rem;
+        font-size: 17px;
     }
 
-    h1, h2 {
-        font-size: 1.8rem;
+    button {
+        font-size: 15px;
     }
-
-html {
-    font-size: 18px;
-}
-/* ===== FORCE BIG TEXT ===== */
-#chapterText {
-    font-size: 20px !important;
-    line-height: 1.8 !important;
-}
-
-h1 {
-    font-size: 32px !important;
-}
-
-h2 {
-    font-size: 24px !important;
-}
-
-p {
-    font-size: 18px !important;
-}
-
-button {
-    font-size: 16px !important;
 }
