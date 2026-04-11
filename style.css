@@ -27,11 +27,13 @@ body {
 /* ================= LOGIN PAGE ================= */
 .container {
     width: 100%;
-    max-width: 400px;
-    text-align: center;
-    padding: 20px;
+    height: 100vh; /* 🔥 full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
-    border-radius: 10px;
     position: relative;
 }
 
@@ -41,10 +43,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     top: 0;
     left: 0;
-    border-radius: 10px;
 }
 
 .container * {
@@ -142,9 +143,11 @@ button:hover {
 /* ================= CHAPTER PAGE ================= */
 #chapterPage {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh; /* 🔥 full screen */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+
     position: relative;
     display: flex;
     justify-content: center;
@@ -157,7 +160,7 @@ button:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.5);
 }
 
 /* content box */
@@ -168,6 +171,9 @@ button:hover {
     max-width: 600px;
     padding: 20px;
     text-align: center;
+
+    background: rgba(0,0,0,0.4); /* 🔥 glass effect */
+    border-radius: 10px;
 }
 
 /* title */
