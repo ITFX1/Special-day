@@ -256,3 +256,41 @@ button:hover {
     position: relative;
     z-index: 1;
 }
+/* ===== CHAPTER GRID ===== */
+.chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+/* ===== NETFLIX CARD STYLE ===== */
+.chapter-card {
+    background: rgba(20,20,20,0.8);
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid rgba(0,255,204,0.2);
+    backdrop-filter: blur(6px);
+}
+
+.chapter-card h3 {
+    color: #00ffcc;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.chapter-card p {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* HOVER EFFECT (Netflix feel) */
+.chapter-card:hover {
+    transform: scale(1.05);
+    background: rgba(0,255,204,0.1);
+    border: 1px solid #00ffcc;
+}
