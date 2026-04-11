@@ -73,7 +73,7 @@ body {
 .hero {
     width: 100%;
     height: 100%;
-    background: url("img1.jpg") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,7 +121,7 @@ button:hover {
     width: 100%;
     margin: 8px 0;
     text-align: left;
-    background: #111;
+    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg")center/cover no-repeat;
 }
 
 .chapter-list button:hover {
