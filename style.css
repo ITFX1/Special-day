@@ -351,3 +351,10 @@ button:hover {
 .chapter-card:hover .chapter-img {
     transform: scale(1.1);
 }
+
+#story {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url("https://res.cloudinary.com/dn0250gby/image/upload/v1775893734/img2_durf24.jpg");
+    background-size: cover;
+    background-position: center;
+}
