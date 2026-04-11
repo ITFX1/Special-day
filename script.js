@@ -189,6 +189,12 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893844/song9_hf7fj
 
 /* ================= OPEN CHAPTER ================= */
 function openChapter(index) {
+    let page = document.getElementById("chapterPage");
+page.style.opacity = 0;
+
+setTimeout(() => {
+    page.style.opacity = 1;
+}, 100);
 
     let c = chapters[index];
 
@@ -198,7 +204,7 @@ function openChapter(index) {
 function typeWriter(text) {
 
     let i = 0;
-    let speed = 25; // ushobora kugabanya cyangwa kongera
+    let speed = 20; // ushobora kugabanya cyangwa kongera
 
     let box = document.getElementById("chapterText");
     box.innerHTML = "";
