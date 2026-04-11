@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DAMGI DAY❤️ </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="section">
+
+    <div class="hero">
+        <h1>DAMGI DAY ❤️</h1>
+
+        <p>
+        Hari inkuru y’umutima…  
+        ushobora kuyifungura igihe witeguye ❤️
+        </p>
+
+        <button onclick="showSection('story')">📖 Story</button>
+        <button onclick="showSection('birthday')">🎉 Birthday</button>
+    </div>
+
+</div>
+
+<!-- ================= STORY LIST ================= -->
+<div id="story" class="section" style="display:none; flex-direction:column;">
+
+    <h2>DAMGI ❤️ Story That Never Really Ended</h2>
+
+    <div class="chapter-list">
+
+        <button onclick="openChapter(0)">Chapter 1: How it all started</button>
+        <button onclick="openChapter(1)">Chapter 2: The silent connection</button>
+        <button onclick="openChapter(2)">Chapter 3: The promises</button>
+        <button onclick="openChapter(3)">Chapter 4: Distance & change</button>
+        <button onclick="openChapter(4)">Chapter 5: What I never said</button>
+        <button onclick="openChapter(5)">Chapter 6: The truth about me</button>
+        <button onclick="openChapter(6)">Chapter 7: If there’s still us</button>
+        <button onclick="openChapter(7)">Chapter 8: DAMGI ❤️</button>
+        <button onclick="openChapter(8)">Finally ❤️</button>
+
+    </div>
+
+    <button onclick="showSection('home')">⬅ Back Home</button>
+
+</div>
+
+<!-- ================= CHAPTER PAGE ================= -->
+<div id="chapterPage" class="section" style="display:none;">
+
+    <div class="chapter-box">
+        <h2 id="chapterTitle"></h2>
+
+        <p id="chapterText"></p>
+
+        <button onclick="backToList()">⬅ Back</button>
+    </div>
+
+</div>
+
+<!-- ================= BIRTHDAY ================= -->
+<div id="birthday" class="section" style="display:none; flex-direction:column;">
+
+    <div class="card">
+        <h1>Happy Birthday ❤️</h1>
+
+        <p>
+        Ku munsi wawe w’amavuko… ndakwifuriza ibyishimo byinshi,
+        amahoro n’urukundo rutagira iherezo.
+
+        Nubwo hari byinshi byahindutse… hari n’ibitigeze bihinduka —
+        agaciro wagize mu mutima wanjye ❤️
+        </p>
+    </div>
+
+    <button onclick="showSection('home')">⬅ Back</button>
+
+</div>
+
+<!-- ================= AUDIO ================= -->
+<audio id="music" loop></audio>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
