@@ -121,7 +121,7 @@ button:hover {
     width: 100%;
     margin: 8px 0;
     text-align: left;
-    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg")center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
 }
 
 .chapter-list button:hover {
@@ -257,8 +257,28 @@ button:hover {
     h1, h2 {
         font-size: 1.8rem;
     }
-}
 
 html {
     font-size: 18px;
+}
+/* ===== FORCE BIG TEXT ===== */
+#chapterText {
+    font-size: 20px !important;
+    line-height: 1.8 !important;
+}
+
+h1 {
+    font-size: 32px !important;
+}
+
+h2 {
+    font-size: 24px !important;
+}
+
+p {
+    font-size: 18px !important;
+}
+
+button {
+    font-size: 16px !important;
 }
