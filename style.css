@@ -294,3 +294,60 @@ button:hover {
     background: rgba(0,255,204,0.1);
     border: 1px solid #00ffcc;
 }
+
+/* ===== GRID LAYOUT ===== */
+.chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    width: 95%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* ===== CARD ===== */
+.chapter-card {
+    background: #111;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* IMAGE AREA */
+.chapter-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+/* TEXT AREA */
+.chapter-info {
+    padding: 12px;
+}
+
+.chapter-info h3 {
+    color: #00ffcc;
+    margin: 0;
+    font-size: 16px;
+}
+
+.chapter-info p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* HOVER EFFECT (Netflix zoom feel) */
+.chapter-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 15px 35px rgba(0,255,204,0.2);
+}
+
+.chapter-card:hover .chapter-img {
+    transform: scale(1.1);
+}
