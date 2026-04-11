@@ -3,10 +3,7 @@ function checkPassword() {
 
     console.log("Entered password:", password);
 
-    if (password === "DAMGI") {
-        alert("Correct password!");
-        window.location.href = "home.html";
-    } else {
+     else {
         document.getElementById("error").innerText = "Wrong password...";
     }
 }
