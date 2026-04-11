@@ -27,22 +27,24 @@ body {
 /* ================= LOGIN PAGE ================= */
 .container {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
     background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
+    border-radius: 10px;
     position: relative;
 }
 
+/* dark overlay */
 .container::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
 }
 
 .container * {
@@ -51,32 +53,33 @@ body {
 }
 
 input {
-    padding: 14px;
+    padding: 12px;
     margin: 10px 0;
-    width: 85%;
-    border-radius: 10px;
+    width: 80%;
+    border-radius: 8px;
     border: 1px solid #00ffcc;
     background: black;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* ================= BUTTON ================= */
+/* ================= BUTTON (PREMIUM STYLE) ================= */
 button {
     margin-top: 15px;
-    padding: 14px 24px;
+    padding: 12px 20px;
     border-radius: 25px;
     border: none;
     background: linear-gradient(135deg, #00ffcc, #0099ff);
     color: black;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* ================= HOME ================= */
@@ -87,16 +90,19 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    padding: 30px;
     position: relative;
 }
 
+/* overlay */
 .hero::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
 }
 
 .hero * {
@@ -105,17 +111,17 @@ button:hover {
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 40px;
     color: #00ffcc;
 }
 
 .hero p {
-    font-size: 22px;
-    margin-top: 12px;
-    max-width: 500px;
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 400px;
 }
 
-/* ================= STORY PAGE ================= */
+/* ================= STORY ================= */
 #story {
     min-height: 100vh;
     background:
@@ -145,10 +151,11 @@ button:hover {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    padding: 15px;
 }
 
 .chapter-card:hover {
-    transform: scale(1.07);
+    transform: scale(1.06);
     box-shadow: 0 15px 35px rgba(0,255,204,0.2);
 }
 
@@ -174,25 +181,26 @@ button:hover {
 .chapter-box {
     position: relative;
     z-index: 1;
-    width: 92%;
-    max-width: 700px;
+    width: 95%;
+    max-width: 750px;
     padding: 25px;
     background: rgba(0,0,0,0.45);
     border-radius: 12px;
 }
 
-/* ================= TEXT SIZE FIX (IMPORTANT) ================= */
+/* ================= TEXT FIX (IMPORTANT) ================= */
 #chapterTitle {
-    font-size: 30px;
+    font-size: 32px;
     color: #00ffcc;
 }
 
 #chapterText {
-    font-size: 22px;   /* 🔥 BIG TEXT FIX */
-    line-height: 1.9;
+    font-size: 24px;   /* 🔥 BIG TEXT FIX */
+    line-height: 2;
     white-space: pre-line;
-    max-height: 70vh;
+    max-height: 75vh;
     overflow-y: auto;
+    padding-right: 8px;
 }
 
 /* ================= BIRTHDAY ================= */
@@ -202,11 +210,12 @@ button:hover {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 38px; }
-    .hero p { font-size: 20px; }
 
-    #chapterText { font-size: 20px; }
-    #chapterTitle { font-size: 24px; }
+.hero h1 { font-size: 38px; }
+.hero p { font-size: 20px; }
 
-    button { font-size: 16px; }
+#chapterTitle { font-size: 24px; }
+#chapterText { font-size: 20px; }
+
+button { font-size: 16px; }
 }
