@@ -209,7 +209,7 @@ button:hover {
 }
 
 .card p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* ================= MOBILE OPTIMIZATION ================= */
@@ -220,7 +220,7 @@ button:hover {
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #chapterTitle {
@@ -228,11 +228,11 @@ button:hover {
     }
 
     #chapterText {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     button {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -280,11 +280,11 @@ button:hover {
 .chapter-card h3 {
     color: #00ffcc;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .chapter-card p {
-    font-size: 13px;
+    font-size: 16px;
     color: #ccc;
 }
 
