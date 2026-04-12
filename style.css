@@ -17,20 +17,13 @@ body {
 
 /* ================= LOGIN CONTAINER ================= */
 .container {
-    max-width: 400px;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.95)),
-        url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
+    background: url("https://res.cloudinary.com/dn0250gby/image/upload/v1775908260/artem-artemov-DVx3R5ulLtU-unsplash_n3tpuw.jpg") center/cover no-repeat;
     background-size: cover;
     background-position: center;
-    flex-direction: column;
-    
 }
+    
 
 h1 {
     color: #00ffcc;
@@ -275,8 +268,8 @@ button { font-size: 16px; }
     z-index: 1000;
         }
 #chapterText {
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 22px;
+    line-height: 2;
     max-width: 90%;
     margin: auto;
     margin-top: 20px;
