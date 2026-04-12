@@ -32,7 +32,7 @@ Amaso yawe yari afite ubwiza bwihariye 👀✨… atuje 🤍, ariko afite ubusob
 Sinari nzi neza icyo ari cyo… ariko nari nzi neza ko hari ikintu cyantangiye gukurura umutima wanjye 💓 bucece 🤍.`,
 bg: "https://res.cloudinary.com/dn0250gby/image/upload/v1775893735/img1_gc7cje.jpg",
 song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775897248/song1_wxtwek.mp3"
-    font-size: "24px"
+    font-size: "84px"
 },
 
 {
