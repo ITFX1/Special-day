@@ -7,27 +7,21 @@
 
 /* ================= BODY ================= */
 body {
-    font-family: Arial, sans-serif;
-    background: black;
+    background-color: #0d0d0d;
     color: white;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* ================= SECTIONS ================= */
-.section {
-    min-height: 100vh;
-    width: 100%;
+    font-family: monospace;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
-/* ================= LOGIN PAGE ================= */
+/* ================= LOGIN CONTAINER ================= */
 .container {
+    max-width: 400px;
     width: 100%;
-    height: 100vh; /* 🔥 full screen */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +31,9 @@ body {
     position: relative;
 }
 
-/* dark overlay */
+h1 {
+    color: #00ffcc;
+}
 
 .container::before {
     content: "";
@@ -48,6 +44,7 @@ body {
     top: 0;
     left: 0;
 }
+
 .container * {
     position: relative;
     z-index: 1;
@@ -64,7 +61,7 @@ input {
     font-size: 16px;
 }
 
-/* ================ BUTTON (PREMIUM STYLE) ================= */
+/* ================= BUTTON ================= */
 button {
     margin-top: 15px;
     padding: 12px 20px;
@@ -83,6 +80,19 @@ button:hover {
     opacity: 0.9;
 }
 
+#error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ================= GENERAL ================= */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ================= HOME ================= */
 .hero {
     width: 100%;
@@ -95,7 +105,6 @@ button:hover {
     position: relative;
 }
 
-/* overlay */
 .hero::before {
     content: "";
     position: absolute;
@@ -112,7 +121,7 @@ button:hover {
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: #00ffcc;
 }
 
@@ -122,7 +131,7 @@ button:hover {
     max-width: 400px;
 }
 
-/* ================= STORY ================= */
+/* ================= STORY LIST ================= */
 #story {
     min-height: 100vh;
     background:
@@ -134,30 +143,60 @@ button:hover {
     padding: 20px;
 }
 
-/* ================= NETFLIX GRID ================= */
+/* ===== CHAPTER GRID ===== */
 .chapter-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 18px;
     width: 95%;
-    max-width: 1000px;
+    max-width: 900px;
     margin-top: 20px;
 }
 
-/* ================= CARD ================= */
+/* ===== CARD ===== */
 .chapter-card {
-    background: rgba(20,20,20,0.85);
+    background: #111;
     border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
+    position: relative;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    padding: 15px;
 }
 
 .chapter-card:hover {
-    transform: scale(1.06);
+    transform: scale(1.07);
     box-shadow: 0 15px 35px rgba(0,255,204,0.2);
+}
+
+/* IMAGE */
+.chapter-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+
+.chapter-card:hover .chapter-img {
+    transform: scale(1.1);
+}
+
+/* TEXT */
+.chapter-info {
+    padding: 12px;
+}
+
+.chapter-info h3 {
+    color: #00ffcc;
+    margin: 0;
+    font-size: 16px;
+}
+
+.chapter-info p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 5px;
 }
 
 /* ================= CHAPTER PAGE ================= */
@@ -179,29 +218,9 @@ button:hover {
     background: rgba(0,0,0,0.6);
 }
 
-.chapter-box {
-    position: relative;
-    z-index: 1;
-    width: 95%;
-    max-width: 750px;
-    padding: 25px;
-    background: rgba(0,0,0,0.45);
-    border-radius: 12px;
-}
-
-/* ================= TEXT FIX (IMPORTANT) ================= */
 #chapterTitle {
     font-size: 32px;
     color: #00ffcc;
-}
-
-#chapterText {
-    font-size: 24px;   /* 🔥 BIG TEXT FIX */
-    line-height: 2;
-    white-space: pre-line;
-    max-height: 75vh;
-    overflow-y: auto;
-    padding-right: 8px;
 }
 
 /* ================= BIRTHDAY ================= */
@@ -216,7 +235,25 @@ button:hover {
 .hero p { font-size: 20px; }
 
 #chapterTitle { font-size: 24px; }
-#chapterText { font-size: 20px; }
 
 button { font-size: 16px; }
 }
+
+/* ================= BACK BUTTON ================= */
+.chapter-box {
+    position: relative;
+}
+
+.chapter-box button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    font-weight: bold;
+    z-index: 1000;
+        }
