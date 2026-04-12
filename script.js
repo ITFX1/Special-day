@@ -20,8 +20,7 @@ function showSection(section) {
 }
 
 /* ================= CHAPTER DATA ================= */
-let chapters = [
-
+let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
 {
 title: "🎬 Chapter 1: The First Time I Saw You ❤️✨",
 text: `Hari igihe ubuzima butangira bucece… 🤍 nta rusaku, nta muntu ubimenye, ariko bukagenda bwubaka inkuru idasanzwe 🌙✨
@@ -187,50 +186,59 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893844/song9_hf7fj
 
 ];
 
-/* ================= OPEN CHAPTER ================= */
-function openChapter(index) {
-
-    let c = chapters[index];
-
-    // text & title
-    document.getElementById("chapterTitle").innerText = c.title;
-    typeWriter(c.text);
+/* ================= TYPEWRITER (FIXED) ================= */
 function typeWriter(text) {
 
     let i = 0;
-    let speed = 5; // ushobora kugabanya cyangwa kongera
+    let speed = 5;
 
     let box = document.getElementById("chapterText");
     box.innerHTML = "";
+
     function typing() {
         if (i < text.length) {
             box.innerHTML += text.charAt(i);
-            // AUTO SCROLL DOWN 🔥
             box.scrollTop = box.scrollHeight;
             i++;
-            
+
+            setTimeout(typing, speed); // 🔥 FIX CRITICAL
         }
     }
 
     typing();
 }
-    // background image
+
+/* ================= OPEN CHAPTER ================= */
+function openChapter(index) {
+
+    let c = chapters[index];
+
+    document.getElementById("chapterTitle").innerText = c.title;
+
+    // show first (IMPORTANT FIX)
+    showSection("chapterPage");
+
+    setTimeout(() => {
+        typeWriter(c.text);
+    }, 100);
+
+    // background
     let page = document.getElementById("chapterPage");
     page.style.backgroundImage = "url('" + c.bg + "')";
 
-    // music auto play
+    // music
     let music = document.getElementById("music");
     music.src = c.song;
     music.play().catch(()=>{});
-
-    showSection("chapterPage");
 }
 
 /* ================= BACK ================= */
 function backToList() {
-  
+
     let music = document.getElementById("music");
-    music.pause();  // stop music when going back
+    music.pause();
+
+    document.getElementById("chapterText").innerHTML = "";
 
     showSection("story");
 }
