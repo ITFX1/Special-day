@@ -290,6 +290,9 @@ function startExperience() {
     let birthday = document.getElementById("birthday");
 
     birthday.innerHTML = `
+    
+    <button class="back-btn" onclick="showSection('home')">⬅ Back</button>
+    
         <div class="birthday-hero">
             <h1>🎬 Welcome to your story ❤️</h1>
 
@@ -302,5 +305,26 @@ function startExperience() {
                 ▶ Start Watching
             </button>
         </div>
+    `;
+}
+function enterGift() {
+
+    let intro = document.querySelector(".birthday-intro");
+
+    intro.innerHTML = `
+        <button class="back-btn" onclick="showSection('home')">⬅ Back</button>
+
+        <h1 style="font-size:38px; color:#ff4d88;">
+            Happy Birthday Aliane ❤️
+        </h1>
+
+        <p style="margin-top:20px; font-size:20px;">
+            Today is your day...  
+            and this is something made just for you ✨
+        </p>
+
+        <button onclick="startExperience()">
+            Continue ❤️
+        </button>
     `;
 }
