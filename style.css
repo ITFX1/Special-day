@@ -315,3 +315,34 @@ button { font-size: 16px; }
     justify-content: center;
     flex-wrap: wrap;
 }
+/* ================= BIRTHDAY HERO ================= */
+.birthday-hero {
+    width: 100%;
+    height: 100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url("https://res.cloudinary.com/dn0250gby/image/upload/v1775893735/img1_gc7cje.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.birthday-hero h1 {
+    font-size: 42px;
+    color: #ff4d88;
+}
+
+.birthday-text {
+    font-size: 20px;
+    margin-top: 15px;
+    max-width: 500px;
+    opacity: 0.9;
+}
