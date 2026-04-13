@@ -285,3 +285,22 @@ function enterGift() {
         </button>
     `;
 }
+function startExperience() {
+
+    let birthday = document.getElementById("birthday");
+
+    birthday.innerHTML = `
+        <div class="birthday-hero">
+            <h1>🎬 Welcome to your story ❤️</h1>
+
+            <p class="birthday-text">
+            This is your private Netflix experience...  
+            made just for you ✨
+            </p>
+
+            <button onclick="startBirthday()">
+                ▶ Start Watching
+            </button>
+        </div>
+    `;
+}
