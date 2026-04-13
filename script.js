@@ -266,3 +266,22 @@ function backToList() {
 
     showSection("story");
 }
+function enterGift() {
+
+    let intro = document.querySelector(".birthday-intro");
+
+    intro.innerHTML = `
+        <h1 style="font-size:38px; color:#ff4d88;">
+            Happy Birthday Aliane ❤️
+        </h1>
+
+        <p style="margin-top:20px; font-size:20px;">
+            Today is your day...  
+            and this is something made just for you ✨
+        </p>
+
+        <button onclick="startExperience()">
+            Continue ❤️
+        </button>
+    `;
+}
