@@ -12,28 +12,6 @@ function checkPassword() {
     }
 }
 
-function startBirthday() {
-
-    let hero = document.querySelector(".birthday-hero");
-
-    hero.innerHTML = `
-        <h1>🎉 Happy Birthday ❤️</h1>
-
-        <p style="font-size:22px; margin-top:20px;">
-        You are one of the most beautiful things  
-        that ever happened in my life ❤️
-        </p>
-
-        <p style="margin-top:20px;">
-        This is your day… enjoy every second ✨
-        </p>
-    `;
-
-    // optional music
-    let music = document.getElementById("music");
-    music.src = "YOUR_BIRTHDAY_SONG_LINK";
-    music.play().catch(()=>{});
-}
 
 /* ================= NAVIGATION ================= */
 function showSection(section) {
