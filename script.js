@@ -302,28 +302,51 @@ function nextBirthdayStep() {
     // STEP 3 (FINAL)
     else if (birthdayStep === 2) {
 
-        birthdayStep = 3;
+    birthdayStep = 3;
 
-        birthday.innerHTML = `
-            <h1>🎉 Happy Birthday ❤️</h1>
+    birthday.innerHTML = `
+        <h1>🎉 Happy Birthday ❤️</h1>
 
-            <p style="margin-top:20px; font-size:20px;">
-            You are one of the most beautiful things  
-            that ever happened in my life ❤️
-            </p>
+        <p id="birthdayText" style="margin-top:20px; font-size:20px;"></p>
 
-            <p style="margin-top:15px;">
-            Enjoy your day... you deserve everything ✨
-            </p>
+        <button onclick="showSection('home')" style="margin-top:25px;">
+            ⬅ Back Home
+        </button>
+    `;
 
-            <button onclick="showSection('home')" style="margin-top:25px;">
-                ⬅ Back Home
-            </button>
-        `;
+    // 🎬 TYPEWRITER MESSAGE
+    let message = `
+You are one of the most beautiful things  
+that ever happened in my life ❤️  
 
-        // 🎵 MUSIC
-        let music = document.getElementById("music");
-        music.src = "PASTE_YOUR_SONG_LINK_HERE";
-        music.play().catch(()=>{});
+No matter what changed...  
+you will always have a special place in my heart 🤍  
+
+Enjoy your day... you deserve everything ✨
+    `;
+
+    typeWriterEffect(message, "birthdayText", 35);
+
+    // 🎵 MUSIC
+    let music = document.getElementById("music");
+    music.src = "PASTE_YOUR_SONG_LINK_HERE";
+    music.play().catch(()=>{});
+}
+}
+
+function typeWriterEffect(text, elementId, speed = 30) {
+
+    let i = 0;
+    let el = document.getElementById(elementId);
+    el.innerHTML = "";
+
+    function typing() {
+        if (i < text.length) {
+            el.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
     }
+
+    typing();
 }
