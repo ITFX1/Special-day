@@ -329,7 +329,7 @@ Enjoy your day... you deserve everything ✨
 
     // 🎵 MUSIC
     let music = document.getElementById("music");
-    music.src = "PASTE_YOUR_SONG_LINK_HERE";
+    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
     music.play().catch(()=>{});
 }
 }
