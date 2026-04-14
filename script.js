@@ -1,5 +1,3 @@
-let birthdayStep = 0;
-let historyStack = [];
 function checkPassword() {
     let password = document.getElementById("password").value;
 
@@ -15,27 +13,17 @@ function checkPassword() {
 
 /* ================= NAVIGATION ================= */
 function showSection(section) {
+let birthdayStep = 0;
+let sections = ["home", "story", "birthday", "chapterPage"];
 
-    let sections = ["home", "story", "birthday", "chapterPage"];
+sections.forEach(sec => {
+    let el = document.getElementById(sec);
+    if (el) el.style.display = "none";
+});
 
-    // push ONLY current visible section
-    sections.forEach(sec => {
-        let el = document.getElementById(sec);
-
-        if (el.style.display === "flex" && sec !== section) {
-            historyStack.push(sec);
-        }
-
-        el.style.display = "none";
-    });
-
-    document.getElementById(section).style.display = "flex";
-
-    // reset birthday flow ONLY when entering fresh
-    if (section === "birthday") {
-        birthdayStep = 1;
-    }
+document.getElementById(section).style.display = "flex";
 }
+
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
 {
@@ -260,85 +248,79 @@ function backToList() {
 
     showSection("story");
 }
-function enterGift() {
+
+function startBirthday() {
+
     birthdayStep = 1;
-
-    let intro = document.querySelector(".birthday-intro");
-
-    intro.innerHTML = `
-        <button class="back-btn" onclick="goBack()">⬅ Back</button>
-
-        <h1 style="font-size:38px; color:#ff4d88;">
-            Happy Birthday Aliane ❤️
-        </h1>
-
-        <button onclick="startExperience()">Continue ❤️</button>
-    `;
-}
-function startExperience() {
-    birthdayStep = 2;
 
     let birthday = document.getElementById("birthday");
 
     birthday.innerHTML = `
-        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+        <h1>🎁 Hey you ❤️</h1>
 
-        <div class="birthday-hero">
-            <h1>🎬 Welcome to your story ❤️</h1>
+        <p style="margin-top:15px;">
+        I have something special for you...
+        </p>
 
-            <button onclick="startBirthday()">
-                ▶ Start Watching
-            </button>
-        </div>
+        <button onclick="nextBirthdayStep()" style="margin-top:20px;">
+            Continue ❤️
+        </button>
+
+        <button onclick="showSection('home')" style="margin-top:10px;">
+            ⬅ Back
+        </button>
     `;
+
+    showSection("birthday");
 }
-function goBack() {
+function nextBirthdayStep() {
 
-    if (birthdayStep === 3) {
-        birthdayStep = 2;
-        startExperience();
-        return;
-    }
+    let birthday = document.getElementById("birthday");
 
-    if (birthdayStep === 2) {
-        birthdayStep = 1;
-        enterGift();
-        return;
-    }
-
+    // STEP 2
     if (birthdayStep === 1) {
-        birthdayStep = 0;
-        showSection("home");
-        return;
+
+        birthdayStep = 2;
+
+        birthday.innerHTML = `
+            <h1>🎬 Welcome...</h1>
+
+            <p style="margin-top:15px;">
+            This is not just a page...  
+            It's your story ❤️
+            </p>
+
+            <button onclick="nextBirthdayStep()" style="margin-top:20px;">
+                Start Watching ▶
+            </button>
+        `;
     }
 
-    if (historyStack.length === 0) {
-        showSection("home");
-        return;
+    // STEP 3 (FINAL)
+    else if (birthdayStep === 2) {
+
+        birthdayStep = 3;
+
+        birthday.innerHTML = `
+            <h1>🎉 Happy Birthday ❤️</h1>
+
+            <p style="margin-top:20px; font-size:20px;">
+            You are one of the most beautiful things  
+            that ever happened in my life ❤️
+            </p>
+
+            <p style="margin-top:15px;">
+            Enjoy your day... you deserve everything ✨
+            </p>
+
+            <button onclick="showSection('home')" style="margin-top:25px;">
+                ⬅ Back Home
+            </button>
+        `;
+
+        // 🎵 MUSIC
+        let music = document.getElementById("music");
+        music.src = "PASTE_YOUR_SONG_LINK_HERE";
+        music.play().catch(()=>{});
     }
-
-    let last = historyStack.pop();
-
-    let sections = ["home", "story", "birthday", "chapterPage"];
-
-    sections.forEach(sec => {
-        document.getElementById(sec).style.display = "none";
-    });
-
-    document.getElementById(last).style.display = "flex";
-}
-function startBirthday() {
-    birthdayStep = 3;
-
-    let hero = document.querySelector(".birthday-hero");
-
-    hero.innerHTML = `
-        <button class="back-btn" onclick="goBack()">⬅ Back</button>
-
-        <h1>🎉 Happy Birthday ❤️</h1>
-    `;
-
-    let music = document.getElementById("music");
-    music.src = "YOUR_BIRTHDAY_SONG_LINK";
-    music.play().catch(()=>{});
 }
