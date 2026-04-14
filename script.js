@@ -1,3 +1,4 @@
+let birthdayStep = 0;
 let historyStack = [];
 function checkPassword() {
     let password = document.getElementById("password").value;
@@ -276,9 +277,13 @@ function backToList() {
 }
 function enterGift() {
 
+    birthdayStep = 1; // 🔥 track step
+
     let intro = document.querySelector(".birthday-intro");
 
     intro.innerHTML = `
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+
         <h1 style="font-size:38px; color:#ff4d88;">
             Happy Birthday Aliane ❤️
         </h1>
@@ -295,28 +300,53 @@ function enterGift() {
 }
 function startExperience() {
 
+    birthdayStep = 2; // 🔥 track step
+
     let birthday = document.getElementById("birthday");
 
     birthday.innerHTML = `
     
     <button class="back-btn" onclick="goBack()">⬅ Back</button>
-        <div class="birthday-hero">
-            <h1>🎬 Welcome to your story ❤️</h1>
 
-            <p class="birthday-text">
-            This is your private Netflix experience...  
-            made just for you ✨
-            </p>
+    <div class="birthday-hero">
+        <h1>🎬 Welcome to your story ❤️</h1>
 
-            <button onclick="startBirthday()">
-                ▶ Start Watching
-            </button>
-        </div>
+        <p class="birthday-text">
+        This is your private Netflix experience...  
+        made just for you ✨
+        </p>
+
+        <button onclick="startBirthday()">
+            ▶ Start Watching
+        </button>
+    </div>
     `;
 }
-
 function goBack() {
 
+    // 🔥 HANDLE BIRTHDAY FLOW FIRST
+    if (birthdayStep > 0) {
+
+        if (birthdayStep === 3) {
+            startExperience();
+            birthdayStep = 2;
+            return;
+        }
+
+        if (birthdayStep === 2) {
+            enterGift();
+            birthdayStep = 1;
+            return;
+        }
+
+        if (birthdayStep === 1) {
+            showSection("home");
+            birthdayStep = 0;
+            return;
+        }
+    }
+
+    // 🔥 NORMAL NAVIGATION
     if (historyStack.length === 0) {
         showSection("home");
         return;
@@ -331,4 +361,29 @@ function goBack() {
     });
 
     document.getElementById(last).style.display = "flex";
+}
+function startBirthday() {
+
+    birthdayStep = 3; // 🔥 track final step
+
+    let hero = document.querySelector(".birthday-hero");
+
+    hero.innerHTML = `
+        <button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+        <h1>🎉 Happy Birthday ❤️</h1>
+
+        <p style="font-size:22px; margin-top:20px;">
+        You are one of the most beautiful things  
+        that ever happened in my life ❤️
+        </p>
+
+        <p style="margin-top:20px;">
+        This is your day… enjoy every second ✨
+        </p>
+    `;
+
+    let music = document.getElementById("music");
+    music.src = "YOUR_BIRTHDAY_SONG_LINK";
+    music.play().catch(()=>{});
 }
