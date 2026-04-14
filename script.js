@@ -316,7 +316,6 @@ function startExperience() {
 }
 function goBack() {
 
-    // 🎯 HANDLE BIRTHDAY FLOW FIRST
     if (birthdayStep === 3) {
         birthdayStep = 2;
         startExperience();
@@ -335,41 +334,6 @@ function goBack() {
         return;
     }
 
-    // 🎯 NORMAL NAVIGATION
-    if (historyStack.length === 0) {
-        showSection("home");
-        return;
-    }
-
-    let last = historyStack.pop();
-
-    let sections = ["home", "story", "birthday", "chapterPage"];
-
-    sections.forEach(sec => {
-        document.getElementById(sec).style.display = "none";
-    });
-
-    document.getElementById(last).style.display = "flex";
-}
-
-    // 🔥 NORMAL NAVIGATION
-    if (historyStack.length === 0) {
-        showSection("home");
-        return;
-    }
-
-    let last = historyStack.pop();
-
-    let sections = ["home", "story", "birthday", "chapterPage"];
-
-    sections.forEach(sec => {
-        document.getElementById(sec).style.display = "none";
-    });
-
-    document.getElementById(last).style.display = "flex";
-}
-
-    // 🔥 NORMAL NAVIGATION
     if (historyStack.length === 0) {
         showSection("home");
         return;
