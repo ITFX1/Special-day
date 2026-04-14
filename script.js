@@ -49,8 +49,12 @@ function showSection(section) {
     });
 
     document.getElementById(section).style.display = "flex";
-}
 
+    // 🔥 FIX: reset birthday flow
+    if (section === "birthday") {
+        birthdayStep = 0;
+    }
+}
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
 {
@@ -277,8 +281,6 @@ function backToList() {
 }
 function enterGift() {
 
-    birthdayStep = 1; // 🔥 track step
-
     let intro = document.querySelector(".birthday-intro");
 
     intro.innerHTML = `
@@ -299,8 +301,6 @@ function enterGift() {
     `;
 }
 function startExperience() {
-
-    birthdayStep = 2; // 🔥 track step
 
     let birthday = document.getElementById("birthday");
 
@@ -324,26 +324,23 @@ function startExperience() {
 }
 function goBack() {
 
-    // 🔥 HANDLE BIRTHDAY FLOW FIRST
-    if (birthdayStep > 0) {
+    // 🔥 HANDLE BIRTHDAY FLOW
+    if (birthdayStep === 3) {
+        birthdayStep = 2;
+        startExperience();
+        return;
+    }
 
-        if (birthdayStep === 3) {
-            startExperience();
-            birthdayStep = 2;
-            return;
-        }
+    if (birthdayStep === 2) {
+        birthdayStep = 1;
+        enterGift();
+        return;
+    }
 
-        if (birthdayStep === 2) {
-            enterGift();
-            birthdayStep = 1;
-            return;
-        }
-
-        if (birthdayStep === 1) {
-            showSection("home");
-            birthdayStep = 0;
-            return;
-        }
+    if (birthdayStep === 1) {
+        birthdayStep = 0;
+        showSection("home");
+        return;
     }
 
     // 🔥 NORMAL NAVIGATION
@@ -362,9 +359,24 @@ function goBack() {
 
     document.getElementById(last).style.display = "flex";
 }
-function startBirthday() {
 
-    birthdayStep = 3; // 🔥 track final step
+    // 🔥 NORMAL NAVIGATION
+    if (historyStack.length === 0) {
+        showSection("home");
+        return;
+    }
+
+    let last = historyStack.pop();
+
+    let sections = ["home", "story", "birthday", "chapterPage"];
+
+    sections.forEach(sec => {
+        document.getElementById(sec).style.display = "none";
+    });
+
+    document.getElementById(last).style.display = "flex";
+}
+function startBirthday() {
 
     let hero = document.querySelector(".birthday-hero");
 
