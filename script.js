@@ -20,8 +20,8 @@ function showSection(section) {
         if (el) el.style.display = "none";
     });
 
-    document.getElementById(section).style.display = "flex";
-}
+    let active = document.getElementById(section);
+    if (active) active.style.display = "flex";
 
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
@@ -249,51 +249,7 @@ function backToList() {
 }
 
 
-
-    // STEP 3 (FINAL EXPERIENCE)
-    else if (birthdayStep === 2) {
-
-        birthdayStep = 3;
-
-        birthday.innerHTML = `
-        <div class="birthday-final">
-
-            <h1>🎉 Happy Birthday ❤️</h1>
-
-            <div class="slider">
-                <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
-            </div>
-
-            <p id="birthdayText"></p>
-
-            <button onclick="playFinalMessage()">💌 Open Final Message</button>
-            <button onclick="showSection('home')">⬅ Back</button>
-
-        </div>
-        `;
-
-        startSlider(); // 🔥 image animation
-
-        let music = document.getElementById("music");
-        music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
-        music.play().catch(()=>{});
-
-    // 🎬 TYPEWRITER MESSAGE
-    let message = `
-You are one of the most beautiful things  
-that ever happened in my life ❤️  
-
-No matter what changed...  
-you will always have a special place in my heart 🤍  
-
-Enjoy your day... you deserve everything ✨
-    `;
-
-    typeWriterEffect(message, "birthdayText", 40);
-
-}
-}
-
+/* ================= TYPEWRITER EFFECT (GENERAL) ================= */
 function typeWriterEffect(text, elementId, speed = 30) {
 
     let i = 0;
@@ -310,33 +266,8 @@ function typeWriterEffect(text, elementId, speed = 30) {
 
     typing();
 }
-function startBirthdayMusic() {
-    let music = document.getElementById("music");
-    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
-    music.play().catch(()=>{});
-}
-function playFinalMessage() {
 
-    let message = `
-Today is not just your birthday... 🎂  
-it's a reminder of how special you are ❤️  
-
-Through every memory... every moment...  
-you have been something I can never replace 🤍  
-
-No matter where life takes us...  
-you will always be part of my story 🌙  
-
-Happy Birthday ❤️✨
-    `;
-
-    typeWriterEffect(message, "birthdayText", 40);
-
-    // 🎵 FINAL MUSIC (song ya DAMGI cyangwa iyindi)
-    let music = document.getElementById("music");
-    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776099666/June_14_%EF%B8%8F_cjcutn.mp3";
-    music.play().catch(()=>{});
-}
+/* ================= SLIDER ================= */
 function startSlider() {
 
     let images = [
@@ -350,7 +281,10 @@ function startSlider() {
     let i = 0;
     let img = document.getElementById("slideImg");
 
+    if (!img) return; // 🔥 safety fix
+
     setInterval(() => {
+
         img.style.opacity = 0;
 
         setTimeout(() => {
@@ -361,14 +295,16 @@ function startSlider() {
 
     }, 3500);
 }
-function stopMusic() {
-    let music = document.getElementById("music");
-    music.pause();
-    music.currentTime = 0;
 
+/* ================= GO HOME ================= */
+function goHome() {
+    stopMusic();
+    showSection("home");
 }
-/* ================= BIRTHDAY FLOW CLEAN ================= */
 
+/* ================= BIRTHDAY SYSTEM ================= */
+
+/* STEP 1 */
 function startBirthday() {
 
     stopMusic();
@@ -403,7 +339,7 @@ function goToStartWatching() {
     `;
 }
 
-/* STEP 3 (🔥 FULL SCREEN SLIDER ONLY) */
+/* STEP 3 (FULL SCREEN EXPERIENCE) */
 function startWatching() {
 
     stopMusic();
@@ -430,7 +366,7 @@ function startWatching() {
     music.play().catch(()=>{});
 }
 
-/* STEP 4 (FINAL MESSAGE PAGE) */
+/* STEP 4 FINAL MESSAGE */
 function openFinalMessage() {
 
     stopMusic();
@@ -441,33 +377,31 @@ function openFinalMessage() {
     <div class="final-message-page">
 
         <div class="message-box">
-            <h2>For You ❤️</h2>
-            <p id="finalText"></p>
-        </div>
+            <h1>🎉 Happy Birthday ❤️</h1>
+            <p id="birthdayText"></p>
 
-        <button class="back-btn" onclick="startWatching()">⬅ Back</button>
+            <button onclick="goHome()">⬅ Back</button>
+        </div>
 
     </div>
     `;
 
-    let text = `
+    let message = `
 Today is not just your birthday... 🎂  
 it's a reminder of how special you are ❤️  
 
-No matter what changed...  
-you will always have a place in my heart 🤍  
+Through every memory... every moment...  
+you have been something I can never replace 🤍  
+
+No matter where life takes us...  
+you will always be part of my story 🌙  
 
 Happy Birthday ❤️✨
     `;
 
-    typeWriterEffect(text, "finalText", 40);
+    typeWriterEffect(message, "birthdayText", 40);
 
     let music = document.getElementById("music");
-    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
+    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776099666/June_14_%EF%B8%8F_cjcutn.mp3";
     music.play().catch(()=>{});
-}
-
-function goHome() {
-    stopMusic();
-    showSection("home");
 }
