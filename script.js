@@ -19,9 +19,9 @@ function showSection(section) {
         let el = document.getElementById(sec);
         if (el) el.style.display = "none";
     });
-
-    document.getElementById(section).style.display = "flex";
-}
+    
+     let active = document.getElementById(section);
+    if (active) active.style.display = "flex";
     
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
@@ -310,6 +310,7 @@ function startBirthday() {
     stopMusic();
 
     let birthday = document.getElementById("birthday");
+    if (!birthday) return; // 🔥 safety
 
     birthday.innerHTML = `
     <div class="birthday-content">
