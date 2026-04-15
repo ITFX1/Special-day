@@ -129,6 +129,13 @@
 <!-- ================= BIRTHDAY ================= -->
 <div id="birthday" class="section" style="display:none; flex-direction:column;">
 
+    <!-- 🎬 TITLE -->
+    <div class="birthday-header">
+        <h1>🎉 Happy Birthday ❤️</h1>
+        <p>A special day... for a special person ✨</p>
+    </div>
+
+    <!-- 📸 GALLERY -->
     <div class="birthday-gallery">
 
         <img src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
@@ -143,14 +150,17 @@
 
     </div>
 
+    <!-- ❤️ MESSAGE -->
     <div class="birthday-message">
-        <h1>Happy Birthday ❤️</h1>
-        <p>
-        You are special… more than words can explain ❤️
-        </p>
+        <h2>For You ❤️</h2>
+
+        <p id="birthdayText"></p>
+
+        <button onclick="playFinalMessage()">💌 Open Final Message</button>
     </div>
 
-    <button onclick="showSection('home')">⬅ Back</button>
+    <!-- 🔙 BACK -->
+    <button onclick="showSection('home')" class="back-btn">⬅ Back</button>
 
 </div>
 
