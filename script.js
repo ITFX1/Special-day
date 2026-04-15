@@ -14,6 +14,8 @@ function checkPassword() {
 /* ================= NAVIGATION ================= */
 let birthdayStep = 0;
 function showSection(section) {
+    
+    stopMusic();
 
     let sections = ["home", "story", "birthday", "chapterPage"];
 
