@@ -431,7 +431,7 @@ function startWatching() {
 
     // 🔥 START SUNO MUSIC HERE
     let music = document.getElementById("music");
-    music.src = "YOUR_SUNO_SONG.mp3";
+    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776099666/June_14_%EF%B8%8F_cjcutn.mp3";
     music.play().catch(()=>{});
 
     startSlider();
