@@ -350,3 +350,8 @@ function typeWriterEffect(text, elementId, speed = 30) {
 
     typing();
 }
+function startBirthdayMusic() {
+    let music = document.getElementById("music");
+    music.src = "LINK_YA_INSTRUMENTAL";
+    music.play().catch(()=>{});
+}
