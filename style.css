@@ -498,3 +498,24 @@ html, body {
     width: 100%;
     overflow: hidden;
 }
+.birthday-full {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.birthday-full .slider img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.controls {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
