@@ -403,7 +403,7 @@ function stopMusic() {
     let music = document.getElementById("music");
     music.pause();
     music.currentTime = 0;
-}
+
 }
 function startWatching() {
 
