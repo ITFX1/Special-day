@@ -467,3 +467,7 @@ Happy Birthday ✨
     music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
     music.play().catch(()=>{});
 }
+function goHome() {
+    stopMusic();
+    showSection("home");
+}
