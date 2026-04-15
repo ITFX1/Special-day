@@ -14,14 +14,17 @@ function checkPassword() {
 /* ================= NAVIGATION ================= */
 let birthdayStep = 0;
 function showSection(section) {
-let sections = ["home", "story", "birthday", "chapterPage"];
 
-sections.forEach(sec => {
-    let el = document.getElementById(sec);
-    if (el) el.style.display = "none";
-});
+    stopMusic(); // 🔥 STOP MUSIC EVERY TIME YOU CHANGE PAGE
 
-document.getElementById(section).style.display = "flex";
+    let sections = ["home", "story", "birthday", "chapterPage"];
+
+    sections.forEach(sec => {
+        let el = document.getElementById(sec);
+        if (el) el.style.display = "none";
+    });
+
+    document.getElementById(section).style.display = "flex";
 }
 
 /* ================= CHAPTER DATA ================= */
@@ -256,14 +259,10 @@ function startBirthday() {
 
     birthday.innerHTML = `
     <div class="birthday-content">
-    
         <h1>🎁 Hey you ❤️</h1>
-
         <p>I have something special for you...</p>
-
-        <button onclick="nextBirthdayStep()">Continue ❤️</button>
-        <button onclick="showSection('home')">⬅ Back</button>
-
+        <button onclick="startWatching()">Continue ❤️</button>
+        <button onclick="goHome()">⬅ Back</button>
     </div>
     `;
 
@@ -401,4 +400,73 @@ function startSlider() {
         }, 400);
 
     }, 3000);
+}
+function stopMusic() {
+    let music = document.getElementById("music");
+    music.pause();
+    music.currentTime = 0;
+}
+function goHome() {
+    stopMusic();
+    showSection("home");
+}
+function startWatching() {
+
+    let birthday = document.getElementById("birthday");
+
+    birthday.innerHTML = `
+    <div class="birthday-full">
+
+        <div class="slider">
+            <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
+        </div>
+
+        <div class="controls">
+            <button onclick="openFinal()">💌 Open Final Message</button>
+            <button onclick="goHome()">⬅ Back</button>
+        </div>
+
+    </div>
+    `;
+
+    // 🔥 START SUNO MUSIC HERE
+    let music = document.getElementById("music");
+    music.src = "YOUR_SUNO_SONG.mp3";
+    music.play().catch(()=>{});
+
+    startSlider();
+}
+function openFinal() {
+
+    stopMusic(); // 🔥 stop slider music
+
+    let birthday = document.getElementById("birthday");
+
+    birthday.innerHTML = `
+    <div class="birthday-final">
+
+        <h1>🎉 Happy Birthday ❤️</h1>
+
+        <p id="birthdayText"></p>
+
+        <button onclick="goHome()">⬅ Back</button>
+
+    </div>
+    `;
+
+    let message = `
+You are one of the most beautiful things ❤️  
+
+No matter what changed...  
+you will always stay in my heart 🤍  
+
+Happy Birthday ✨
+    `;
+
+    typeWriterEffect(message, "birthdayText", 40);
+
+    // 🎵 INSTRUMENTAL
+    let music = document.getElementById("music");
+    music.src = "YOUR_INSTRUMENTAL.mp3";
+    music.play().catch(()=>{});
 }
