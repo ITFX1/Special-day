@@ -12,8 +12,8 @@ function checkPassword() {
 
 
 /* ================= NAVIGATION ================= */
-function showSection(section) {
 let birthdayStep = 0;
+function showSection(section) {
 let sections = ["home", "story", "birthday", "chapterPage"];
 
 sections.forEach(sec => {
@@ -250,6 +250,7 @@ function backToList() {
 }
 
 function startBirthday() {
+function startBirthday() {
 
     birthdayStep = 1;
 
@@ -260,18 +261,12 @@ function startBirthday() {
     
         <h1>🎁 Hey you ❤️</h1>
 
-        <p style="margin-top:15px;">
-        I have something special for you...
-        </p>
+        <p>I have something special for you...</p>
 
-        <button onclick="nextBirthdayStep()" style="margin-top:20px;">
-            Continue ❤️
-        </button>
+        <button onclick="nextBirthdayStep()">Continue ❤️</button>
+        <button onclick="showSection('home')">⬅ Back</button>
 
-        <button onclick="showSection('home')" style="margin-top:10px;">
-            ⬅ Back
-        </button>
-        </div>
+    </div>
     `;
 
     showSection("birthday");
@@ -286,33 +281,45 @@ function nextBirthdayStep() {
         birthdayStep = 2;
 
         birthday.innerHTML = `
+        <div class="birthday-content">
+
             <h1>🎬 Welcome...</h1>
 
-            <p style="margin-top:15px;">
-            This is not just a page...  
-            It's your story ❤️
-            </p>
+            <p>This is not just a page... it's your story ❤️</p>
 
-            <button onclick="nextBirthdayStep()" style="margin-top:20px;">
-                Start Watching ▶
-            </button>
+            <button onclick="nextBirthdayStep()">Start Watching ▶</button>
+
+        </div>
         `;
     }
 
-    // STEP 3 (FINAL)
+    // STEP 3 (FINAL EXPERIENCE)
     else if (birthdayStep === 2) {
 
-    birthdayStep = 3;
+        birthdayStep = 3;
 
-    birthday.innerHTML = `
-        <h1>🎉 Happy Birthday ❤️</h1>
+        birthday.innerHTML = `
+        <div class="birthday-final">
 
-        <p id="birthdayText" style="margin-top:20px; font-size:20px;"></p>
+            <h1>🎉 Happy Birthday ❤️</h1>
 
-        <button onclick="showSection('home')" style="margin-top:25px;">
-            ⬅ Back Home
-        </button>
-    `;
+            <div class="slider">
+                <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
+            </div>
+
+            <p id="birthdayText"></p>
+
+            <button onclick="playFinalMessage()">💌 Open Final Message</button>
+            <button onclick="showSection('home')">⬅ Back</button>
+
+        </div>
+        `;
+
+        startSlider(); // 🔥 image animation
+
+        let music = document.getElementById("music");
+        music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
+        music.play().catch(()=>{});
 
     // 🎬 TYPEWRITER MESSAGE
     let message = `
@@ -376,4 +383,29 @@ Happy Birthday ❤️✨
     let music = document.getElementById("music");
     music.src = "SHYIRAMO_LINK_YA_FINAL_SONG";
     music.play().catch(()=>{});
+}
+let images = [
+"https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg",
+"https://res.cloudinary.com/dn0250gby/image/upload/v1776098703/pic3_fwl8sp.jpg",
+"https://res.cloudinary.com/dn0250gby/image/upload/v1776098702/pic5_auafnm.jpg",
+"https://res.cloudinary.com/dn0250gby/image/upload/v1776098707/pic7_zvjiyd.jpg",
+"https://res.cloudinary.com/dn0250gby/image/upload/v1776098714/pic8_eytlw9.jpg"
+];
+
+let index = 0;
+
+function startSlider() {
+
+    let img = document.getElementById("slideImg");
+
+    setInterval(() => {
+        index = (index + 1) % images.length;
+        img.style.opacity = 0;
+
+        setTimeout(() => {
+            img.src = images[index];
+            img.style.opacity = 1;
+        }, 500);
+
+    }, 3000);
 }
