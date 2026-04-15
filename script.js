@@ -375,6 +375,6 @@ Happy Birthday ❤️✨
 
     // 🎵 FINAL MUSIC (song ya DAMGI cyangwa iyindi)
     let music = document.getElementById("music");
-    music.src = "SHYIRAMO_LINK_YA_FINAL_SONG";
+    music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776099666/June_14_%EF%B8%8F_cjcutn.mp3";
     music.play().catch(()=>{});
 }
