@@ -292,6 +292,7 @@ function startSlider() {
         }, 600);
 
     }, 3500);
+}
 
 /* ================= BIRTHDAY SYSTEM ================= */
 
