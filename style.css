@@ -513,17 +513,16 @@ html, body {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    transition: opacity 1s ease;
 }
 .birthday-full .slider img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    transition: opacity 1s ease;
 }
 .birthday-full::after {
     display: none;
 }
-
 .controls {
     position: fixed;
     bottom: 80px; /* 🔥 yazamutse neza */
@@ -538,11 +537,10 @@ html, body {
 }
 
 .controls button {
-    position: fixed;
+    position: relative;
     padding: 12px 18px;
     border-radius: 25px;
     font-size: 14px;
-    position: fixed;
     z-index: 10;
 }
 .final-message-page {
@@ -563,4 +561,4 @@ html, body {
 #finalText {
     font-size: 20px;
     line-height: 1.8;
-}
+        }
