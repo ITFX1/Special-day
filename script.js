@@ -19,8 +19,7 @@ function showSection(section) {
         let el = document.getElementById(sec);
         if (el) el.style.display = "none";
     });
-    let target = document.getElementById(section);
-    if (target) target.style.display = "flex";
+    document.getElementById(section).style.display = "flex"; 
 }
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
