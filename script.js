@@ -286,7 +286,7 @@ function startSlider() {
         setInterval(() => {
     i = (i + 1) % images.length;
     img.src = images[i];
-}, 3000);
+}, 20000);
 
     }, 3500);
 }
