@@ -524,7 +524,7 @@ html, body {
     display: none;
 }
 .controls {
-    position: fixed;
+    position: static;
     bottom: 80px; /* 🔥 yazamutse neza */
     left: 0;
     width: 100%;
@@ -562,3 +562,34 @@ html, body {
     font-size: 20px;
     line-height: 1.8;
         }
+/* 🔥 FINAL MESSAGE BUTTON (RIGHT SIDE) */
+.final-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #ff4d88;
+    color: white;
+    border: none;
+    font-weight: bold;
+
+    z-index: 9999;
+}
+
+/* 🔥 BACK BUTTON (LEFT SIDE) */
+.back-btn-fixed {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    font-weight: bold;
+
+    z-index: 9999;
+}
