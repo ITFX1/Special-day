@@ -581,7 +581,7 @@ html, body {
 /* 🔥 BACK BUTTON (LEFT SIDE) */
 .back-btn-fixed {
     position: fixed;
-    bottom: 60px;
+    bottom: 90px;
     left: 20px;
 
     padding: 12px 20px;
