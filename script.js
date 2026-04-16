@@ -283,13 +283,10 @@ function startSlider() {
 
     setInterval(() => {
 
-        img.style.opacity = 0;
-
-        setTimeout(() => {
-            i = (i + 1) % images.length;
-            img.src = images[i];
-            img.style.opacity = 1;
-        }, 600);
+        setInterval(() => {
+    i = (i + 1) % images.length;
+    img.src = images[i];
+}, 3000);
 
     }, 3500);
 }
