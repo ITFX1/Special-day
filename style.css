@@ -606,7 +606,7 @@ html, body {
 .final-btn {
     position: fixed;
     bottom: 80px;
-    left: 20px;
+    right: 20px;
     background: linear-gradient(45deg, #ff4d88, #ff99cc);
     box-shadow: 0 0 15px rgba(255,77,136,0.6);
     padding: 12px 20px;
@@ -622,8 +622,8 @@ html, body {
 /* 🔥 BACK BUTTON (LEFT SIDE) */
 .back-btn-fixed {
     position: fixed;
-    bottom: 350px;
-    right: 20px;
+    bottom: 80px;
+    left: 20px;
     background: linear-gradient(45deg, #00ffcc, #66ffe0);
     box-shadow: 0 0 15px rgba(0,255,204,0.6);
     padding: 12px 20px;
