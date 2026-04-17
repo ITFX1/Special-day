@@ -494,11 +494,6 @@ button { font-size: 16px; }
     overflow-y: auto;
     max-height: 70vh;
 }
-.message-box {
-    width: 95%;
-    max-width: 700px;
-    margin: auto;
-}
 
 /* ===== BACK BUTTON ===== */
 .back-btn {
@@ -585,9 +580,10 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-
 .message-box {
-    max-width: 600px;
+    width: 95%;
+    max-width: 700px;
+    margin: auto;
     padding: 20px;
 }
 
@@ -607,14 +603,16 @@ html, body {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: linear-gradient(45deg, #ff4d88, #ff99cc);
-    box-shadow: 0 0 15px rgba(255,77,136,0.6);
+
     padding: 12px 20px;
     border-radius: 25px;
-    background: #ff4d88;
+
+    background: linear-gradient(45deg, #ff4d88, #ff99cc); /* ✅ gusa */
     color: white;
     border: none;
     font-weight: bold;
+
+    box-shadow: 0 0 15px rgba(255,77,136,0.6);
 
     z-index: 9999;
 }
