@@ -340,10 +340,10 @@ function startWatching() {
     <div class="birthday-full">
     
      <!-- 🔥 TITLE PINNED -->
+     
     <div class="birthday-title">
-    <span class="date">June 14</span><br>
-    <span class="main-text">Happy Birthday ❤️</span>
-</div>
+        June 14 ❤️ <br> Happy Birthday to You 🎉
+    </div>
 
         <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
 
