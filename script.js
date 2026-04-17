@@ -395,7 +395,7 @@ you will always be part of my story 🌙
 Happy Birthday ❤️✨
     `;
 
-    typeWriterEffect(message, "birthdayText", 8);
+    typeWriterEffect(message, "birthdayText", 5);
 
     let music = document.getElementById("music");
     music.src = "https://res.cloudinary.com/dn0250gby/video/upload/v1776197883/Benson_Boone_-_Beautiful_Things___Piano_Cover_by_Pianella_Piano_256k_acywfr.mp3";
