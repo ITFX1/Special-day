@@ -509,6 +509,32 @@ html, body {
     height: 100vh;
     overflow: hidden;
 }
+/* 🔥 TITLE HEJURU YA SCREEN */
+.birthday-title {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeSlide 1.5s ease;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+
+    color: white;
+    text-shadow: 0 0 10px black;
+
+    z-index: 9999;
+}
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
 .birthday-full img {
     width: 100vw;
     height: 100vh;
