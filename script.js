@@ -284,6 +284,17 @@ function startSlider() {
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503301/received_523320575412603_lt5zgl.jpg",
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503306/received_1425877781110264_kd4e6b.jpg",
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503299/pic9_1_qkbs7g.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503296/pic5_1_fle7ph.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503297/pic16_1_ibpujf.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503308/pic15_1_xjwfmw.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503297/pic10_1_b7jvbi.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503296/pic11_1_oi1bx0.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic19_1_gqttcw.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503300/pic25_1_dxqcqc.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503503/Screenshot_20260408-143515_1_quifjn.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503300/pic20_1_t9y39i.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503310/pic22_1_flut2u.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic14_1_fewlzz.jpg",
 
     ];
 
@@ -299,6 +310,7 @@ function startSlider() {
     img.src = images[i];
 }, 3500);
 }
+                }                
 
 /* ================= BIRTHDAY SYSTEM ================= */
 
