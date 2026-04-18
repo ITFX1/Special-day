@@ -259,7 +259,7 @@ function typeWriterEffect(text, elementId, speed = 5) {
         if (i < text.length) {
 
             // 🔥 write multiple characters at once
-            let chunkSize = 3; // 👉 hindura 3 → 5 niba ushaka faster
+            let chunkSize = 5; // 👉 hindura 3 → 5 niba ushaka faster
 
             el.innerHTML += text.substring(i, i + chunkSize);
 
@@ -329,7 +329,7 @@ function goToStartWatching() {
     birthday.innerHTML = `
     <div class="birthday-content">
         <h1>🎬 Welcome...</h1>
-        <p>This is your story ❤️</p>
+        <p>This is your Day ❤️</p>
 
         <button onclick="startWatching()">Start Watching ▶</button>
     </div>
