@@ -276,11 +276,25 @@ function typeWriterEffect(text, elementId, speed = 5) {
 function startSlider() {
 
     let images = [
-        "https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg",
-        "https://res.cloudinary.com/dn0250gby/image/upload/v1776098703/pic3_fwl8sp.jpg",
-        "https://res.cloudinary.com/dn0250gby/image/upload/v1776098702/pic5_auafnm.jpg",
-        "https://res.cloudinary.com/dn0250gby/image/upload/v1776098707/pic7_zvjiyd.jpg",
-        "https://res.cloudinary.com/dn0250gby/image/upload/v1776098714/pic8_eytlw9.jpg"
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503303/received_496925261627258_qjioiq.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503310/received_162515422709270_jnp5df.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503302/received_368102514725438_o9kyg0.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503301/pic3_1_vhow6z.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503302/received_415687806515219_ujexll.jpg"
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503301/received_523320575412603_lt5zgl.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503306/received_1425877781110264_kd4e6b.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503299/pic9_1_qkbs7g.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503296/pic5_1_fle7ph.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503297/pic16_1_ibpujf.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503308/pic15_1_xjwfmw.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503297/pic10_1_b7jvbi.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503296/pic11_1_oi1bx0.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic19_1_gqttcw.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503300/pic25_1_dxqcqc.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503503/Screenshot_20260408-143515_1_quifjn.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503300/pic20_1_t9y39i.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503310/pic22_1_flut2u.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic14_1_fewlzz.jpg",
     ];
 
     let i = 0;
