@@ -362,7 +362,7 @@ function startWatching() {
         June 14 ❤️ <br> Happy Birthday to You 🎉🎶🎧
     </div>
 
-        <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776098712/pic2_xqmhyq.jpg">
+        <img id="slideImg" src="https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic19_1_gqttcw.jpg">
 
         <div class="controls">
     <button class="final-btn" onclick="openFinalMessage()">💌 Open final message</button>
