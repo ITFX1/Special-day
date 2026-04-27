@@ -55,8 +55,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893856/song2_wh5kq
 },
 
 {
-title: "Chapter 3: The promises",
-text: `🎬 Chapter 3: When We Finally Said It ❤️✨📖
+title: "Chapter 3: When We Finally Said It ❤️✨📖",
+text: `
 Hari igihe umutima uba waramaze gufata umwanzuro… 💭❤️ nubwo amagambo ataravuga 🤐🌙
 Kuri twe, urukundo rwari rwaratangiye kera… 🤍 mu buryo butuje 🌿, mu biganiro bya buri munsi 💬, mu buryo bwo kumenyana buhoro buhoro 👀✨. Icyari gisigaye, kwari ukubyemera no kubivuga 🫶❤️.
 Kandi uwo mwanya warageze 🌙✨.
@@ -75,8 +75,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893824/song3_dycgh
 },
 
 {
-title: "Chapter 4: Distance & change",
-text: `🎬 Chapter 4: The Distance I Never Explained 💔🌙📖
+title: "Chapter 4: The Distance I Never Explained 💔🌙📖",
+text: `
 Ariko ubuzima ntibuhora bugenda uko tubwifuza… 🌪️🤍
 Hari igihe ibintu bihinduka buhoro buhoro… 🔄 nta nubwo ubimenya neza 💭.
 Ni ko byatangiye kuri njye… 😔
@@ -103,8 +103,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775897336/song4_uvp5j
 },
 
 {
-title: "Chapter 5: What I never said",
-text: `🎬 Chapter 5: The Last Words That Stayed 💔🌙📖
+title: "Chapter 5: The Last Words That Stayed 💔🌙📖",
+text: `
 Hari amagambo amwe atajya asibangana… 🕰️💭 n’iyo imyaka yagenda, n’iyo ibintu bihinduka 🔄🤍.
 Njye mfite amagambo yawe nkiri kumva kugeza n’uyu munsi 🎧💔.
 Byari ku itariki ya 3/9/2022 📅 saa 10:10 z’umugoroba 🌙⏰… ubwo wanyandikiraga kuri Facebook 📱. Ntabwo byari amagambo menshi… 💬 ariko byari bihagije 🤍.
@@ -122,8 +122,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893836/song5_fgdpz
 },
 
 {
-title: "Chapter 6: The truth about me",
-text: `🎬 Chapter 6: What I Never Showed You 🤍💭📖
+title: "Chapter 6: What I Never Showed You 🤍💭📖",
+text: `
 Hari ibintu byinshi utigeze ubona… 👀💔 si uko nabishakaga kuguhisha ❌🤍, ahubwo ni uko nari ntabizi gusobanura 💭😔.
 Ushobora kuba warabonaga ko ndi kure… 🚶‍♂️🌫️ ko ntakwitayeho 💔, ko wenda nagize abandi ❓… ariko ukuri ni uko nta na rimwe byigeze biba byo ❌❤️.
 Nari mfite ibintu byinshi ku mutima… 💭🧠 regret yo kutaguha umwanya 😔, kwibaza niba narakubabaje kuruta uko nabyumvaga 💔, no kumva ko wenda natakaje umuntu nari mfite agaciro gakomeye mu buzima bwanjye 🤍🌙.
@@ -137,8 +137,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893858/song6_nfjpu
 },
 
 {
-title: "Chapter 7: If there’s still us",
-text: `🎬 Chapter 7: If There’s Still Something Left 🌙❤️📖
+title: "Chapter 7: If There’s Still Something Left 🌙❤️📖",
+text: `
 Nzi neza ko ubuzima bushobora kuba bwarahinduye byinshi 🔄💭.
 Birashoboka ko wowe wamaze gukomeza 🚶‍♀️✨… ko hari abandi baguhaye umwanya 🤍, baguha ibyo wifuzaga icyo gihe 💖. Kandi niba ari byo, sinabiguhakana ❌🤍… kuko wari ubikwiye 🌙✨.
 Nta na rimwe nakwifuriza ikindi kitari ibyiza 🌹🤍.
@@ -153,8 +153,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893830/song7_t2mcq
 },
 
 {
-title: "Chapter 8: DAMGI ❤️",
-text: `🎬 Chapter 8: DAMGI ❤️🌙✨📖
+title: "Chapter 8: DAMGI ❤️🌙✨📖",
+text: `
 Hari ibintu bimwe ubuzima butapfukirana… 🌫️💭 n’iyo igihe cyagenda ⏳🤍.
 DAMGI ❤️✨
 Si izina gusa… ni inkuru 📖💔.
@@ -168,8 +168,8 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775893856/song8_pobae
 },
 
 {
-title: "Finally ❤️",
-text: `🎬 FINAL: No Matter What Happens Next ❤️🌙📖
+title: "Finally:: No Matter What Happens Next ❤️🌙📖",
+text: `
 Uyu munsi sindi hano ngo nguhindure icyemezo cyawe… 🤍❌
 Sindi hano ngo nkwereke ko nari umwere… 💭😔
 Ahubwo ndi hano ngo nkubwire ukuri kwanjye 🌙✨.
