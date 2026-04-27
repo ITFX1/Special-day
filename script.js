@@ -24,7 +24,7 @@ function showSection(section) {
 /* ================= CHAPTER DATA ================= */
 let chapters = [ /* 🔥 KEEP ALL YOUR DATA EXACTLY AS IT IS */ 
 {
-title: "🎬 Chapter 1: The First Time I Saw You ❤️✨",
+title: "Chapter 1: The First Time I Saw You ❤️✨",
 text: `Hari igihe ubuzima butangira bucece… 🤍 nta rusaku, nta muntu ubimenye, ariko bukagenda bwubaka inkuru idasanzwe 🌙✨
 Ni uko byatangiye kuri njye… igihe nakubonaga bwa mbere 👀❤️
 Hari muri S2 📚 ku kigo cya GS Kiraro Protestant 🏫. Wari uje mushya, uvuye ku kigo cya ES Sumba 🔄. Kuva ku munsi wa mbere, wari utandukanye n’abandi bose ✨. Si uko wivugaga cyane 🤍, ahubwo wari ufite ituze ryihariye ryakurangaga 🌿.
@@ -38,7 +38,7 @@ song: "https://res.cloudinary.com/dn0250gby/video/upload/v1775897248/song1_wxtwe
 },
 
 {
-title: "🎬 Chapter 2: The Silent Connection 🤍📖✨",
+title: "Chapter 2: The Silent Connection 🤍📖✨",
 text: `Nubwo twahuriraga ku kigo buri munsi… 🏫👀 ntabwo twavuganaga 🤐
 Si uko tutabishakaga… ahubwo amasoni yari igice cyacu twembi 😊🤍. Njye nkiri umuntu utari usanzwe uvugana n’abakobwa 😅, nawe ufite ituze n’isoni byari bikuranga 🌸. Twabaga turi hafi… ariko kure mu magambo 💭💔.
 Ariko ubuzima bugira uburyo bwabwo bwo guhuza abantu 🌙✨.
