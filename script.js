@@ -410,8 +410,8 @@ Uyu munsi si umunsi usanzwe… ni umunsi wihariye Imana yaremeyeho umuntu udasan
 Ni umunsi wibutsa isi ko ifite umuntu ufite umutima mwiza, uciye bugufi, ufite urukundo rurenze amagambo 💖 ariwe wowe 
 message yange iribwibande cyane
   kwijambo ryimana kuko 
-  icyoniahingikirizaho nijambo ryimana 
-  gusa niyo mpamvu nawe nkwiye
+  icyonishingikirizaho nijambo ryimana 
+  gusa, ninayo mpamvu nawe nkwiye
   kukuganiriza kwijambo ryimana kuko 
   rindutira byose
 
