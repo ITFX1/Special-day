@@ -296,6 +296,8 @@ function startSlider() {
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503300/pic20_1_t9y39i.jpg",
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503310/pic22_1_flut2u.jpg",
         "https://res.cloudinary.com/dn0250gby/image/upload/v1776503298/pic14_1_fewlzz.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1778517691/Screenshot_20260220-081101_o6hxka.jpg",
+        "https://res.cloudinary.com/dn0250gby/image/upload/v1779795144/Screenshot_20260526-132608_j7lfkp.jpg",
 
     ];
 
