@@ -345,7 +345,7 @@ function goToStartWatching() {
         <h1>🎬 Welcome...</h1>
         <p>This is your Day ❤️</p>
 
-        <button onclick="startWatching()">Start Watching ▶</button>
+        <button onclick="startWatching()">Start Watching 🎥</button>
     </div>
     `;
 }
